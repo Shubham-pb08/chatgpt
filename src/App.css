@@ -1,38 +1,79 @@
-.App {
+body {
+  background-color: #323437;
+  color: #fff;
+}
+
+textarea {
+  width: 50%;
+  height: 100px;
+  display: block;
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 10px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.show {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 1px;
+  width: 70%;
+  text-align: left;
+  margin: auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.submit:hover {
+  background: #fff;
+  border: 2px solid transparent;
+  color: #000;
 }
