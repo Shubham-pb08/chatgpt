@@ -1,25 +1,109 @@
+
 body {
   background-color: #323437;
   color: #fff;
 }
 
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.editing-container {
+  width: 80%;
+}
+
+.rightmenu {
+  width: 20%;
+  height: 100vh;
+  border-left: 2px solid #646669;
+}
+
+/* font-family: 'Open Sans', sans-serif; */
+
+.form {
+  margin: 50px 30px;
+}
+
 textarea {
-  width: 50%;
-  height: 100px;
+  width: 90%;
+  height: 300px;
+  border-radius: 5px;
+  outline: none;
   display: block;
   font-size: 20px;
   font-weight: 100;
   letter-spacing: 1px;
   line-height: 25px;
   padding: 10px;
-  border-radius: 5px;
   resize: none;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid grey;
   color: #fff;
   font-family: 'Roboto Slab', serif;
 }
 
+.submit {
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #fff;
+  border: 1px solid transparent;
+  color: #000;
+}
+
+.option-heading {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;  
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 25px; 
+  text-align: center;
+  border-bottom: 1px solid #646669;
+  padding: 20px;
+  margin: 0px;
+}
+
+.option-list_ul {
+  list-style: none;
+}
+
+.option-list_ul li select {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  color: grey;
+  margin-top: 10px;
+}
+
+.result-panel {
+  margin: 50px 30px;
+  width: 90%;
+}
+
+.result-panel .show {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+/*
 h1 {
   font-family: Helvetica, sans-serif;
   font-size: 60px;
@@ -44,7 +128,6 @@ form {
 }
 
 .show {
-  /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 100;
@@ -58,22 +141,10 @@ form {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.submit {
-  width: 100px;
-  height: 50px;
-  border-radius: 5px;
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  font-family: Roboto;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.submit:hover {
-  background: #fff;
-  border: 2px solid transparent;
-  color: #000;
-}
+.error-msg {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 25px;
+  letter-spacing: 1px;
+} */

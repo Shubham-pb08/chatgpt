@@ -9,7 +9,7 @@ const port = 3001;
 
 const configuration = new Configuration({
     organization: "org-6Ojdts1joSXMPKMWlbzxPcvA",
-    apiKey: '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',
+    apiKey: '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',
 });
 const openai = new OpenAIApi(configuration);
 
@@ -21,7 +21,7 @@ app.post('/',async (req,res)=> {
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: ` ${message}`,
-        max_tokens: 100,
+        max_tokens: 1000,
         temperature: 0,
     });
 
@@ -36,4 +36,9 @@ app.post('/',async (req,res)=> {
 
 app.listen(port, ()=> {
     console.log("Example is running good");
+})
+
+app.get('/', (req,res)=> {
+    console.log("Example is running good");
+    res.send('hey there');
 })
