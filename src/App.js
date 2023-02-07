@@ -7,6 +7,7 @@ function App() {
   const [message,setMessage] = useState('');
   const [response,setResponse] = useState('');
   const [error,setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +19,11 @@ function App() {
       body: JSON.stringify({message})
       })
       .then((res)=>res.json())
-      .then((data)=>{console.log(data.message); setResponse(data.message)}) 
+      .then((data)=>{console.log(data.message); setLoading(false); setResponse(data.message)})
+  }
+
+  const handleClick = () => {
+    setLoading(true);
   }
  
   return(
@@ -27,11 +32,13 @@ function App() {
       <div className="editing-container">
         <form className="form" onSubmit={handleSubmit}>
           <textarea placeholder="Tell me something funny" className="pallete" id="content" value={message} onChange={(e)=>{setMessage(e.target.value)}}></textarea>
-          <button type="submit" className="submit">Submit</button>
+          <button onClick={handleClick} type="submit" className="submit">
+            {loading ? "Loading..." : "Submit"}
+          </button>
         </form>
 
         <div className="result-panel">
-          <p className="show">{response}</p>
+          {loading ? <div className="shade"></div>: <p className="show">{response}</p>}
         </div>
       </div>
 
