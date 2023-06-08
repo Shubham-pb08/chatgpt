@@ -8,10 +8,24 @@ function App() {
   const [response,setResponse] = useState('');
   const [error,setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  
+  const { Configuration, OpenAIApi } = require("openai");
+
+const configuration = new Configuration({
+  apiKey: "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",
+});
+const openai = new OpenAIApi(configuration);
+
+const completion = await openai.createChatCompletion({
+  model: "gpt-3.5-turbo",
+  messages: [{role: "user", content: "Hello world"}],
+});
+  console.log(completion.data.choices[0].message);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:3001',{
+    fetch('https://api.openai.com/v1/chat/completions',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
